@@ -9,13 +9,13 @@ function route.new(header, path, html, css, js)
     path = path,
   }, route)
   if html then
-    self.html = self.path .. 'html/' ..html
+    self.html = self.path .. html
   end
   if css then
-    self.css = self.path .. 'css/' ..css
+    self.css = css
   end
   if js then
-    self.js = self.path .. 'js/' ..js
+    self.js = js
   end
   return self
 end
