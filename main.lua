@@ -14,6 +14,13 @@ routes = {
 		router.new("/main.js", "routes/root/main.js"),
 		router.new("/profile.png", "routes/root/profile.png")
 	),
+  contact = router.new(
+    "/contact",
+    routes.. '/contact/',
+    "contact.html",
+		router.new("/css/styles.css", "routes/css/styles.css"),
+		router.new("/contact.js", "routes/contact/contact.js")
+  ),
 }
 
 function get_path(header)
@@ -22,8 +29,7 @@ function get_path(header)
 			return route.css.path
 		elseif utils.ends_with(header, "js") and header == route.js.header then
 			return route.js.path
-		elseif utils.ends_with(header, "png") and header == route.route1.header then
-			print(route.route1.header .. " " .. route.route1.path)
+		elseif utils.ends_with(header, "png") and route and route.route1 and header == route.route1.header then
 			return route.route1.path
 		elseif route.header == header then
 			return route.html

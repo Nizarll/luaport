@@ -22,7 +22,6 @@ function route.new(header, path, html, css, js, ...)
 		return self
 	end
 	for i, arg in pairs(args) do
-		print("route" .. i)
 		self["route" .. i] = arg
 	end
 	return self
