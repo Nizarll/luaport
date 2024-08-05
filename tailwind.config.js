@@ -23,6 +23,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maskImage: {
+        'linear-gradient': 'linear-gradient(to bottom, #000 90%, transparent 100%)',
+      },
       textShadow: generateTextShadowPresets(colors),
     },
   },
